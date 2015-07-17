@@ -29,8 +29,13 @@
       .x.axis path {
         /* display: none; */
     </style>
+    
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+           
     </head>
     <body>
+      
+      TESTING 123
       
       <svg class="chart"></svg>
       
@@ -76,7 +81,7 @@
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         
         //
-        d3.tsv("projects/4.data.tsv", type, function(error, data) {
+        d3.tsv("4.data.tsv", type, function(error, data) {
           if (error) throw error;
         
           x.domain(data.map(function(d) { return d.letter; }));
@@ -116,7 +121,7 @@
       </script>
       
        <!-- Other JS -->
-       <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
       
     </body>
  </html>
