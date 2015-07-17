@@ -1,0 +1,98 @@
+/* Initial body */
+body {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  color:#193441;
+}
+
+/* Menu */
+.menu {
+  background: #3e606f;
+  left: -250px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 250px;
+}
+
+/* Basic styling */
+
+.canvas {
+  background: #FCFFF5; 
+  height: 100%;
+  overflow:auto;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.menu ul {
+  border-top: 1px solid;
+  border-color: #193441;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #193441;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+  color: #FCFFF5;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu li.current {
+  background:#193441;
+}
+
+.menu a {
+  color: #FCFFF5;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  color: #FCFFF5;
+}
+
+.icon-close i {
+  cursor: pointer;
+  padding: 25px;
+  font-size: 24px;
+}
+
+.icon-menu {
+  color: #193441;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width:100px;
+  cursor: pointer;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+
+#page {
+  padding-left: 25px;
+}
+
+h2 {
+  margin-top:10px;
+  margin-bottom:20px;
+}
