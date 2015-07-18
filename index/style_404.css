@@ -1,0 +1,27 @@
+body {
+    background-color:#FCFFF5;
+}
+
+.frame {
+    width: 206px;
+    height: 109px;
+    position: fixed;
+    top: 50%;   
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -103px;
+
+}
+
+#image {
+    background: url(img_eklogo_black.png) no-repeat scroll center top transparent;
+    height: 100%;
+    width: 100%;
+}
+
+#text {
+    padding-top: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
