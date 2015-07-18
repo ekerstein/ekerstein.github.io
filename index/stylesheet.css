@@ -1,31 +1,34 @@
+/* ALTERNATE - makes text tricky though
 html { 
    width:100%; 
    height:100%; 
-   background: url(eklogo_black.png) center center no-repeat;
+   background-color:#FCFFF5;
+   background-size: auto 109px;
+   background-image: url(eklogo_black.png);
+   background-repeat: no-repeat;
+   background-position: center center;
 }
+
+
+*/
 
 body {
-  background:#FCFFF5;
+    background-color:#FCFFF5;
 }
 
-/*
 .frame {
     width: 206px;
     height: 109px;
     position: absolute;
     top: 50%;   
     left: 50%;
-    transform: translate(-50%, -50%);
-    background:red;
+    transform: translate(-50%, -65%);
 }
 
 #image {
     background: url(eklogo_black.png) no-repeat scroll center top transparent;
-    height: 109px;
-    width: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 100%;
+    width: 100%;
 }
 
 #text {
@@ -34,4 +37,3 @@ body {
     font-size: 15px;
     text-align: center;
 }
-*/
