@@ -2,7 +2,7 @@ body {
     background-color:#FCFFF5;
 }
 
-.frame {
+#frame {
     width: 206px;
     height: 109px;
     position: fixed;

@@ -1,98 +1,94 @@
-/* Initial body */
 body {
-  left: 0;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-  color:#193441;
-}
-
-/* Menu */
-.menu {
-  background: #3e606f;
-  left: -250px;  /* start off behind the scenes */
-  height: 100%;
-  position: fixed;
-  width: 250px;
-}
-
-/* Basic styling */
-
-.canvas {
-  background: #FCFFF5; 
-  height: 100%;
-  overflow:auto;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-}
-
-.menu ul {
-  border-top: 1px solid;
-  border-color: #193441;
-  list-style: none;
   margin: 0;
   padding: 0;
+  background: #FCFFF5;
+}
+ 
+nav ul {
+  list-style: none;
+  color: #333333;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  height: 46px;
+  padding: 0;
+  margin: 0;
 }
 
-.menu li {
-  border-bottom: 1px solid #193441;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 45px;
-  padding-bottom: 3px;
-  padding-left: 20px;
-  padding-top: 3px;
-  color: #FCFFF5;
-  font-size: 15px;
+nav li {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: -4px;
+  width:25%;
+  line-height: 46px;
+  font-family: 'Open Sans';
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 300;
+}
+ 
+nav a {
   text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
+  color: #fff;
+  display: block;
+  transition: .5s opacity;
+}
+ 
+nav a:hover {
+  opacity: 0.65;
+}
+ 
+nav a.active {
+  opacity: 0.65;
 }
 
-.menu li.current {
-  background:#193441;
+.logo img {
+  vertical-align: bottom;
+  height:26px;
+  width:auto;
+  transform: translate(0, -10px);
 }
 
-.menu a {
-  color: #FCFFF5;
-  font-size: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 
-.icon-close {
-  color: #FCFFF5;
-}
 
-.icon-close i {
-  cursor: pointer;
-  padding: 25px;
-  font-size: 24px;
-}
 
-.icon-menu {
-  color: #193441;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-top: 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  width:100px;
-  cursor: pointer;
+/*
+.logo {
+    background: url(../index/img_eklogo_white.png) no-repeat scroll center center transparent;
+    background-size: auto 30px;
 }
-
-.icon-menu i {
-  margin-right: 5px;
+ */
+ 
+ 
+ /*
+@media screen and (min-width: 600px) {
+  nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 46px;
+    line-height: 46px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
+ 
+   Option 1 - Display Inline
+  nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+  /* Options 2 - Float
+  nav li {
+    float: left;
+  }
+  nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  nav {
+    background-color: #444;
+  }
 }
-
-#page {
-  padding-left: 25px;
-}
-
-h2 {
-  margin-top:10px;
-  margin-bottom:20px;
-}
+  */
