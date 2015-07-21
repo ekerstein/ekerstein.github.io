@@ -1,2 +1,5 @@
+name:           Edward Kerstein
+description:    "The personal site of Edward Kerstein"
+url:            http://ekerstein.com
 gems:
   - jekyll-redirect-from
