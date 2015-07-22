@@ -1,5 +1,7 @@
 name:           Edward Kerstein
-description:    "The personal site of Edward Kerstein"
-url:            http://ekerstein.com
+description:    The personal site of Edward Kerstein
+url:            http://edwardkerstein.com
+google_analytics: UA-40743603-1
+permalink: /:title
 gems:
   - jekyll-redirect-from
