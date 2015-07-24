@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+ <html>
+  <head>
+    <style>
+      .chart {
+        width: 960px;
+        height: 500px;
+      }
+      .bar {
+        fill: steelblue;
+      }
+      
+      .bar:hover {
+        fill: brown;
+      }
+      
+      .axis {
+        font: 10px sans-serif;
+      }
+      
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+      
+      .x.axis path {
+        /* display: none; */
+    </style>
+    
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+           
+    </head>
+    <body>
+
+      <svg class="chart"></svg>
+      
+      <script type="text/javascript">
+              
+        // Axis labels show in the margin. The graph is displayed in the inner area.
+        var margin = {top: 20, right: 20, bottom: 30, left: 40},
+            width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+        
+        // Ordinal scales are discrete (vs continuous). This works for the letters of the alphabet
+        var x = d3.scale.ordinal()
+            // creates range bands in round numbers (the left edge of each bar). 
+            // Divides width by the domain (letters in data set), with .1 padding. 
+            // [interval] padding.
+            // x.rangeBand() would return the width of each bar.
+            .rangeRoundBands([0, width], .1);
+        
+        // Linear scales are continuous. Range is from 0 to height, essentially making the y dataset in proportion to the height.
+        // in the y axis, 0 represents the top of the page, so [0, height] would create a bar chart coming from the top down.
+        // Reversing that to [height, 0] creates a bar chart starting bottom up.
+        var y = d3.scale.linear()
+            .range([height, 0]);
+        
+        // creates a new default axis. Scale is X values set above. Orientation is below the chart.
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+        
+        // creates a new default axis. Scale is Y values set above. Orientation is to the left of chart. 
+        // Ticks creates roughly 10 ticks in the percent format
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .ticks(10, "%");
+        
+        // Appends a new SVG element to the body named svg
+        // appends "g" element to svg, 
+        var svg = d3.select(".chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+        //
+        d3.tsv("4.data.tsv", type, function(error, data) {
+          if (error) throw error;
+        
+          x.domain(data.map(function(d) { return d.letter; }));
+          y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+        
+          svg.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis);
+        
+          svg.append("g")
+              .attr("class", "y axis")
+              .call(yAxis)
+            .append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 6)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("Frequency");
+        
+          svg.selectAll(".bar")
+              .data(data)
+            .enter().append("rect")
+              .attr("class", "bar")
+              .attr("x", function(d) { return x(d.letter); })
+              .attr("width", x.rangeBand())
+              .attr("y", function(d) { return y(d.frequency); })
+              .attr("height", function(d) { return height - y(d.frequency); });
+        });
+        
+        //
+        function type(d) {
+          d.frequency = +d.frequency;
+          return d;
+        }
+
+      </script>
+    </body>
+ </html>
+
