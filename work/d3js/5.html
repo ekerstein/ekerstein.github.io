@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+ <html>
+  <head>
+    <title>D3 Graphics</title>
+     <link rel="stylesheet" href="5.css">
+    
+    <style>
+      #chart svg {
+        border: 1px solid black;
+      }
+    </style>
+            
+    </head>
+    <body>
+
+      <div class="container">
+        <h2>D3 Graphic</h2>
+        <div id="chart"></div>
+      </div>
+      
+      <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    
+      <script type="text/javascript">
+              
+var bardata = [];
+ 
+for (var i = 0; i < 100; i++) {
+      bardata.push(Math.random())
+}
+ 
+var height = 400,
+    width = 600,
+    topOffset = 10,
+    sideOffset = 10;
+    
+// Scales the color of each rect.
+// Linear scales work for unordered lists, or when the order isn't meaningful.
+var colors = d3.scale.linear()
+    // domain describes from->to of unscaled data. From 0 to the maximum value in bardata
+    // Using d3.max(bardata) would give colors scaled to value. Would need to use just "colors" as the fill value of the rect.
+    .domain([0, bardata.length * .33, bardata.length *.66, bardata.length])
+    // range describes from->to of scaled data
+    .range(['#B58929','#268bd2','#FFB832','#C61C6F'])
+    
+// Scales the Y height of each rect. Prevents large numbers from flowing off the chart. 
+// Linear scales work for unordered lists, or when the order isn't meaningful.
+var yScale = d3.scale.linear()
+    // domain describes from->to of unscaled data. From 0 to the maximum value in bardata
+    .domain([0, d3.max(bardata)])
+    // range describes from->to of scaled data
+    .range([0, height - topOffset])
+    
+// Scales the X width of each rect. Prevents large data sets from flowing off the chart. 
+// Ordinal scales work for ordered data, or when the order is meaningful.
+var xScale = d3.scale.ordinal()
+    // domain describes from->to of unscaled data. From 0 to the number of values in vardata.
+    .domain(d3.range(0, bardata.length))
+    // range describes from->to of scaled data. Rangebands give nice predefined bands of data.
+    .rangeBands([sideOffset, width - sideOffset])
+    
+d3.select('#chart').append('svg')
+    .attr('width', width)
+    .attr('height', height)
+//    .style('background', '#C9D7D6')
+    // selectAll command is actually targeting the append. It's appending a rect for each data.
+    .selectAll('rect').data(bardata)
+    .enter().append('rect')
+        // Uses a function to pass the rect index into the colors scaling function, which is an array mapping the index to each color.
+        .style('fill', function(d,i) {
+            return colors(i);
+        })
+        // setting the width of each rect to the rangeband information from our xScale function
+        .attr('width', xScale.rangeBand())
+        // function command simply cycles through data and outputs each one as height
+        .attr('height', function(d) {
+            return yScale(d);
+        })
+        // function for the x value of each rect passes data and index of the array.
+        // Runs index through xScale function where rangeBands sets the x position.
+        .attr('x', function(d,i) {
+          return xScale(i);
+        })
+        // function for the y value of each rect takes chart height - rect height to flip position from top to bottom
+        .attr('y', function(d) {
+          return height - yScale(d);
+        })
+      
+
+      </script>
+    </body>
+ </html>
+
