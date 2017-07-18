@@ -1,4 +1,1 @@
-# ekerstein.github.io
-Personal website
-
-* NO LONGER UPDATING THIS REPO*
+<h2>ekerstein.github.io (currently unused)</h2>

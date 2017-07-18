@@ -1,7 +1,7 @@
 /* ALTERNATE - makes text tricky though
-html { 
-   width:100%; 
-   height:100%; 
+html {
+   width:100%;
+   height:100%;
    background-color:#FCFFF5;
    background-size: auto 109px;
    background-image: url(eklogo_black.png);
@@ -18,7 +18,7 @@ body {
     width: 206px;
     height: 109px;
     position: fixed;
-    top: 50%;   
+    top: 50%;
     left: 50%;
     margin-top: -70px;
     margin-left: -103px;
@@ -26,7 +26,7 @@ body {
 }
 
 #image {
-    background: url(img_eklogo_black.png) no-repeat scroll center top transparent;
+    background: url(logo.png) no-repeat scroll center top transparent;
     height: 100%;
     width: 100%;
 }
