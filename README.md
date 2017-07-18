@@ -1,1 +1,1 @@
-<h2>ekerstein.github.io (currently unused)</h2>
+<h2>(currently unused)</h2>
