@@ -1,2 +1,2 @@
 # ekerstein.com
-Online business card mimicking the style of linktr.ee
+Online business card in the style of linktr.ee
