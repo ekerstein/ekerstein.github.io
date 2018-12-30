@@ -1,0 +1,39 @@
+/* ALTERNATE - makes text tricky though
+html {
+   width:100%;
+   height:100%;
+   background-color:#FCFFF5;
+   background-size: auto 109px;
+   background-image: url(eklogo_black.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+*/
+
+body {
+    background-color:#FCFFF5;
+}
+
+#frame {
+    width: 206px;
+    height: 109px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -103px;
+
+}
+
+#image {
+    background: url(logo.png) no-repeat scroll center top transparent;
+    height: 100%;
+    width: 100%;
+}
+
+#text {
+    padding-top: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
