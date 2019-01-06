@@ -20,45 +20,62 @@
     <meta property="og:image:secure_url" content="https://ekerstein.com//assets/picture.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Edward Kerstein - Data analyst, Photographer, Writer">
-    <meta name="twitter:description" content="My online business card. See the projects I'm working on.">  
+    <meta name="twitter:description" content="My online business card. See the projects I'm working on.">
     <meta name="twitter:domain" content="Edward Kerstein">
     <meta name="twitter:image" content="https://ekerstein.com//assets/picture.png">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="apple-mobile-web-app-title" content="Edward Kerstein">
     <meta name="application-name" content="Edward Kerstein">
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+    <meta name="msapplication-config" content="favicons/browserconfig.xml" />
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
-  
+
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112741500-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-112741500-5');
+    </script>
 
 </head>
 
 <body>
     <div class="container">
         <header>
-            <img class="prof-pic" src="/assets/picture.png" alt="Photo of Edward Kerstein" />
-            <p class="user-name">
-                <a href="http://twitter.com/edwardkerstein">@edwardkerstein</a>
-            </p>
+            <img class="prof-pic" src="assets/picture.png" alt="Photo of Edward Kerstein" />
+            <div class="bio">
+                <p class="bio-name">Edward Kerstein</p>
+                <p>I blog about health and work on a variety of coding projects.</p>
+            </div>
+            <div class="social">
+                <a href="https://twitter.com/EdwardKerstein">Twitter</a>
+                <a href="https://www.instagram.com/edwardkerstein/">Instagram</a>
+                <a href="https://www.linkedin.com/in/edwardkerstein">Linkedin</a>
+            </div>
         </header>
         <main>
             <ul>
-                <li><a href="https://notunhealthy.com/author/edward/" class="link">Health blogging</a></li>
-                <li><a href="https://www.instagram.com/edwardkerstein/" class="link">Film photography</a></li>
-                <li><a href="https://bitcoinvisuals.com" class="link">Bitcoin Visuals</a></li>
+                <li><a href="https://notunhealthy.com/author/edward/" class="link">Not Unhealthy &mdash; health articles</a></li>
+                <!--
+                <li><a href="https://www.instagram.com/edwardkerstein/" class="link">Ghost Graphs &mdash; blog statistics</a></li>
+                -->
+                <li><a href="https://bitcoinvisuals.com" class="link">Bitcoin Visuals &mdash; network statistics</a></li>
             </ul>
         </main>
         <footer>
-            <img src="/assets/logo.png" alt="Edward Kerstein logo" />
+            <img src="assets/logo.png" alt="Edward Kerstein logo" />
         </footer>
     </div>
 </body>

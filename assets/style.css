@@ -94,25 +94,37 @@ a {
 /* Header */
 
 .prof-pic {
-  border-radius:  50%;
-  width: 90px;
+	border-radius:  50%;
+	width: 90px;
 }
 
-.user-name {
-  text-align: center;
-    margin-top: 15px;
-    margin-bottom: 25px;
+.bio {
+	font-family: 'Karla', Helvetica, sans-serif;
+	margin: 25px auto 20px auto;
+	text-align: center;
+	width: 100%;
 }
 
-.user-name a {
-   color: #bbb;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: 'Karla', Helvetica, sans-serif;
+.bio-name {
+	font-weight: 600;
+	font-size: 18px;
 }
 
-.user-name a:hover {
-  color: #000;
+.social {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.social a {
+	color: #bbb;
+	font-size: 1rem;
+	font-weight: 600;
+	font-family: 'Karla', Helvetica, sans-serif;
+	padding: 0px 10px;
+}
+
+.social a:hover {
+	color: #000;
 }
 
 /* Links */
