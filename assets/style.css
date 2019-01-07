@@ -99,9 +99,10 @@ a {
 }
 
 .bio {
-	font-family: 'Karla', Helvetica, sans-serif;
-	margin: 25px auto 20px auto;
-	text-align: center;
+  font-family: 'Karla', Helvetica, sans-serif;
+  margin: 25px auto 20px auto;
+  text-align: center;
+  max-width: 620px;
 }
 
 .bio-name {
