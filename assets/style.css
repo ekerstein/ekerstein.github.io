@@ -1,163 +1,117 @@
-/*
-BASE 
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+/* GLOBAL */
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
 body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	font-family: 'Karla', Helvetica, sans-serif !important;
 }
 
-img, iframe {
-  vertical-align: bottom;
-  max-width: 100%;
+a,
+a:hover {
+  text-decoration: none !important;
 }
 
-input, textarea, select {
-  font: inherit;
+.px-5px {
+	padding-left: 5px !important;
+	padding-right: 5px !important;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+/* BODY */
 
-/*
-GLOBAL 
-*/
-body {
-	font-family: Arial;
-	font-size: 16px;
-	line-height: 1.5;
-	
-	background-color: #ffffff;
-	color: #333333;
-	margin: 35px 10px 40px 10px;
-}
-
-img {
+.container-body {
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
-  display: block;
-  height:  auto;
+  margin-top: 40px;
+  margin-bottom: 26px;
 }
 
-a {
-  text-decoration: none;
+.divider {
+	padding-left: 11px !important;
+	padding-right: 11px !important;
 }
 
-.container {
-    width: 100%;
-    max-width: 680px;
-    margin: 0 auto;
+/* CARDS */
+
+.card {
+  margin-bottom: 10px;
+  border: 1px solid #e8e8e8 !important;
 }
 
-/* Header */
-
-.prof-pic {
-	border-radius:  50%;
-	width: 90px;
+a .card:hover {
+  -webkit-box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
+  -moz-box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
+  box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
 }
+
+.card-block {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
+
+.card img {
+  max-width: 56px;
+  margin: 8px;
+}
+
+.card-title {
+  color: #212529;
+  margin-top: 6px;
+  margin-bottom: 4px !important;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* BIO */
 
 .bio {
-  font-family: 'Karla', Helvetica, sans-serif;
-  margin: 25px auto 20px auto;
-  text-align: center;
-  max-width: 400px;
+  border: 0px;
 }
 
-.bio-name {
-	font-weight: 600;
-	font-size: 18px;
+.bio img {
+	border-radius: 50%;
+  max-width: 90px;
+  margin: 8px;
 }
+
+.bio .card-title {
+  margin-top: 9px;
+	font-weight: 600;
+	font-size: 19px;
+}
+
+.bio .card-text {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* SOCIAL */
 
 .social {
-	text-align: center;
-	margin-bottom: 25px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  line-height: 1.3;
 }
 
 .social a {
-	color: #bbb;
-	font-size: 1rem;
-	font-weight: 600;
-	font-family: 'Karla', Helvetica, sans-serif;
-	padding: 0px 10px;
+  font-size: 14px;
+  color: #6c757d;
+
 }
 
 .social a:hover {
-	color: #000;
+	color: black;
 }
 
-/* Links */
+/* FOOTER 
 
-.link {
-    display: block;
-    background-color: #3d3b3c;
-    color: #fff;
-    text-align: center;
-    font-size: 1rem;
-    font-family: 'Karla', Helvetica, sans-serif;
-    font-weight: 700;
-    padding: 15px 0 15px 0;
-    margin: 12px 0 11px 0;
-    border: 2px solid #3d3b3c;
-}
-
-.link:hover {
-    color: #3d3b3c;
-    background-color: #fff;
-}
-
-
-/* Footer */
-
-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 20px;
-  left: 0px;
-}
-
-footer img {
+.footer img {
   width: 40px;
-  padding-top: 40px;
+  background: white;
+  margin: 0 auto;
+  display: block;
 }
+
+*/
