@@ -1,15 +1,7 @@
 /*
 GLOBAL 
 */
-body {
-	font-family: 'Karla', Helvetica, sans-serif !important;
-	font-size: 16px;
-	line-height: 24px;
-	background-color: #ffffff;
-	color: #333333;
-  margin: 35px 10px 40px 10px;
 
-}
 
 img {
   margin: 0 auto;
@@ -17,28 +9,6 @@ img {
   height:  auto;
 }
 
-a {
-  text-decoration: none;
-}
-
-
-
-/* Header */
-
-.prof-pic {
-	border-radius:  50%;
-	width: 90px;
-}
-
-.bio {
-  
-  max-width: 600px;
-}
-
-.bio-name {
-	font-weight: 600;
-	font-size: 18px;
-}
 
 .social a {
 	color: #bbb;
@@ -53,20 +23,7 @@ a {
 
 /* Links */
 
-.link {
-    display: block;
-    background-color: #3d3b3c;
-    color: #fff;
-    text-align: center;
-    font-size: 1rem;
-    font-family: 'Karla', Helvetica, sans-serif;
-    font-weight: 700;
-    padding: 15px 0 15px 0;
-    margin: 12px 0 11px 0;
-    border: 2px solid #3d3b3c;
-}
-
-.link:hover {
+.social:hover {
     color: #3d3b3c;
     background-color: #fff;
 }
@@ -79,6 +36,17 @@ a {
 
 
 
+/* GLOBAL */
+
+body {
+	font-family: 'Karla', Helvetica, sans-serif !important;
+}
+
+a,
+a:hover {
+  text-decoration: none !important;
+}
+
 /* BODY */
 
 .container-body {
@@ -86,16 +54,35 @@ a {
   max-width: 800px;
   margin: 0 auto;
   margin-top: 40px;
+  margin-bottom: 26px;
 }
 
 /* CARDS */
 
 .card {
   margin-bottom: 10px;
+  border: 1px solid #e3e3e3;
+}
+
+a .card:hover {
+  -webkit-box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
+  -moz-box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
+  box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
+}
+
+.card-block {
+  padding-left: 4px;
+}
+
+.card img {
+  max-width: 56px;
+  margin: 8px;
 }
 
 .card-title {
-  margin-top: 8px;
+  color: #212529;
+  margin-top: 6px;
+  margin-bottom: 4px !important;
 }
 
 .card-text {
@@ -106,6 +93,33 @@ a {
 .px-5px {
 	padding-left: 5px !important;
 	padding-right: 5px !important;
+}
+
+/* HEADER */
+
+.bio,
+.social {
+  border: 0px !important;
+}
+
+.bio,
+.social {
+  margin-bottom: 17px;
+}
+
+.bio img {
+	border-radius: 50%;
+  max-width: 90px;
+  margin: 0px;
+}
+
+.bio .card-title {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.bio .card-text {
+  font-size: 16px;
 }
 
 /* FOOTER */
