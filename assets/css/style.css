@@ -1,3 +1,4 @@
+/**************************************************************/
 /* GLOBAL */
 
 body {
@@ -14,6 +15,7 @@ a:hover {
 	padding-right: 5px !important;
 }
 
+/**************************************************************/
 /* BODY */
 
 .container-body {
@@ -29,17 +31,21 @@ a:hover {
 	padding-right: 11px !important;
 }
 
+/**************************************************************/
 /* CARDS */
 
 .card {
+	padding: 6px 4px;
 	margin-bottom: 10px;
 	border: 1px solid #e8e8e8 !important;
+	border-radius: 7px !important;
 }
 
 a .card:hover {
 	-webkit-box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
 	-moz-box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
 	box-shadow: 4px 4px 5px -3px rgba(170,170,170,0.6);
+	border-color: #b3b3b3 !important;
 }
 
 .card-block {
@@ -68,9 +74,11 @@ a .card:hover {
 	opacity: .55;
 }
 
+/**************************************************************/
 /* BIO */
 
 .bio {
+	padding: 10px 8px;
 	border: 0px;
 }
 
@@ -78,6 +86,10 @@ a .card:hover {
 	border-radius: 50%;
 	max-width: 90px;
 	margin: 8px;
+}
+
+.bio .card-block {
+	padding-left: 8px;
 }
 
 .bio .card-title {
@@ -91,6 +103,7 @@ a .card:hover {
 	line-height: 1.4;
 }
 
+/**************************************************************/
 /* SOCIAL */
 
 .social {
@@ -108,6 +121,7 @@ a .card:hover {
 	color: black;
 }
 
+/**************************************************************/
 /* FOOTER 
 
 .footer img {
